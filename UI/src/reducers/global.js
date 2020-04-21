@@ -1,11 +1,12 @@
+import createReducer from '../tools/createReducer'
+import globalType from '../types/global'
 let initialState = {
    test:1
 };
-module.exports={
-    test:(state,action)=>{
+module.exports = createReducer(initialState, {
+   [globalType.DEFAULT_CONFIG](state, action) {
         return {
             ...state,
-            testInfo:action.data
+            defaultConfig: action.data
         }
-    }
-}
+    }})

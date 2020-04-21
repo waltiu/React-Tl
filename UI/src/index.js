@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss'
-import store from './store/index'
+import storeConfig from './store/index'
 import { Provider } from 'react-redux'
 import Test from './pages/test'
 
@@ -13,6 +13,12 @@ class App extends React.Component {
 
 
     render() {
+        const store =storeConfig(
+            {
+                name:1
+            }
+        )
+        console.log(store)
         return ( 
             <Provider store={store}>
                 <Test></Test>

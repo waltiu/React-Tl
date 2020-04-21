@@ -1,13 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import globalType from '../types/global'
+import globalAction from '../actions/global'
+import { bindActionCreators } from 'redux';
+
 class Test extends React.Component {
     constructor() {
         super();
     }
     test=()=>{
-        console.log(this.props)
+        const getConfig=this.props.actions.getBaseConfig
+        getConfig(123)
     }
     render(){
-        console.log(this.props)
+        console.log(this.props.testInfo,9999)
         return(
             <div>
                 <button onClick={this.test}>测试</button>
@@ -18,18 +24,15 @@ class Test extends React.Component {
 const mapStateToProps = (state) => {
     return {
         testInfo: state
-       
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
+    console.log(dispatch,'0000')
     return {
-        onTodoClick: id => {
-            dispatch({
-                type: TEST_INFO,
-                data: id
-            });
-          }
+        actions:bindActionCreators({
+            ...globalAction
+        },dispatch)
     }
 };
-export default connect(mapStateToProps, mapDispatchToProps, undefined, { withRef: true })(Test);
+export default connect(mapStateToProps, mapDispatchToProps,undefined,undefined)(Test);
