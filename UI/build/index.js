@@ -25,7 +25,16 @@ app:path.resolve(basePath,'src','index.js'),
         // 根据文件后缀匹配规则
         rules: [
             // 配置js/jsx语法解析
-            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ }
+            { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ },
+            //scss解析
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS
+                ]
+            }
         ]
     }
 }
