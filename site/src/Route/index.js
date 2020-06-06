@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { HashRouter as Router, Route } from "react-router-dom";
 import RouterConfig from './config.js'
 const RouteConfig = () => {
@@ -7,8 +7,7 @@ const RouteConfig = () => {
       <Router>
         {
           RouterConfig.map(item => (
-            <Route path={item.path} exact component={require(`../views/${item.com}/index`).default} />
-
+            <Route path={item.path} exact component={require(`../views/${item.com}/index`).default} key={item.path}/>
           ))
         }
       </Router>
