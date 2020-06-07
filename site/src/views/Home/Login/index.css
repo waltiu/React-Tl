@@ -1,0 +1,67 @@
+@keyframes line1 {
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 50px;
+  }
+}
+@keyframes line2 {
+  90% {
+      width: 0px;
+    }
+  100% {
+    width: 10px;
+  }
+}
+@keyframes line3 {
+  70% {
+    width: 0px;
+  }
+
+  100% {
+    width: 200px;
+  }
+}
+.login_line{
+  position: relative;
+  top: 6px;
+  left: -60px;
+}
+.login_line1{
+  width: 0px;
+  height: 1px;
+  background-color: #706262;
+  margin-top: 20px;
+  animation: line1 1s linear forwards;
+}
+.login_line2{
+  width: 0px;
+  height: 1px;
+  background-color: #706262;
+  transform: rotate(-45deg);
+  position: relative;
+  left: 50px;
+  top: -4px;
+  animation: line2 2s linear forwards;
+
+}
+.login_line3{
+  width: 0px;
+  height: 1px;
+  background-color: #706262;
+  position: relative;
+  top: -10px;
+  left: 59px;
+  animation: line3 3s linear forwards;
+
+}
+.login_input{
+  position: absolute;
+  height: 22px;
+  top: -10px;
+  margin-top: 5px;
+  width: 200px;
+  left: 55px;
+  display: flex;
+}
