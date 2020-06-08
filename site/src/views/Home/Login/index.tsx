@@ -29,7 +29,7 @@ const Login:React.FC = ( ) =>{
       </div>
       <Model visible={pageState} footer={null} onCancel={openLoginPage}>
         <img src={url} className="login_title"/>
-        <p className="login_title2">天龙八部账号信息网</p>
+        <p className="login_title2">新天龙八部信息平台</p>
         <div className="login_form">
           <div style={{ display: "flex", position: "relative" }}>
             <p>用户名：</p>
