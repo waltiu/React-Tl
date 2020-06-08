@@ -16,8 +16,6 @@ const Model: React.FC<childProps> = (props) =>{
       className="modal_style"
       style={{ position: "relative" }}
       width="50vw"
-      maskClosable={false}
-      mask={false}
     >
       <img
         src="http://i1.cy.com/xtl/main/20200430/videoBorder.png"

@@ -20,7 +20,7 @@
   }
 
   100% {
-    width: 200px;
+    width: 250px;
   }
 }
 .login_line{
@@ -33,7 +33,7 @@
   height: 1px;
   background-color: #706262;
   margin-top: 20px;
-  animation: line1 1s linear forwards;
+  animation: line1 0.2s linear forwards;
 }
 .login_line2{
   width: 0px;
@@ -43,7 +43,7 @@
   position: relative;
   left: 50px;
   top: -4px;
-  animation: line2 2s linear forwards;
+  animation: line2 0.4s linear forwards;
 
 }
 .login_line3{
@@ -53,7 +53,7 @@
   position: relative;
   top: -10px;
   left: 59px;
-  animation: line3 3s linear forwards;
+  animation: line3 1s linear forwards;
 
 }
 .login_input{
@@ -61,7 +61,26 @@
   height: 22px;
   top: -10px;
   margin-top: 5px;
-  width: 200px;
+  margin-left: 10px;
+  width: 230px;
   left: 55px;
   display: flex;
+}
+.login_form{
+  position: relative;
+  margin-top: 80px;
+  margin-left: 40px;
+}
+.login_title{
+  position: relative;
+  left: 40px;
+  top: 30px;
+}
+.login_title2{
+  font-size: 24px;
+  position: relative;
+  top: 45px;
+  left: 90px;
+  color: #573e2d;
+  text-shadow: 5px 5px 5px #FF0000;
 }
