@@ -10,12 +10,16 @@ const Login:React.FC = ( ) =>{
   
   const openLoginPage = () =>{
     changePageState(!pageState)
+    if(!pageState){
+      changeInputVisible(false)
+
+    }
   }
   const title =1
   useEffect(()=>{
     setTimeout(() => {
       changeInputVisible(true)
-    }, 1000);
+    }, 2000);
   })
   return (
     <div className="home_login" >
@@ -32,7 +36,7 @@ const Login:React.FC = ( ) =>{
             <Line />
             {inputVisible && (
               <div className="login_input">
-                <Input style={{ border: "none" }} />
+                <Input style={{ border: "none" }}  placeholder="请输入用户名！"/>
               </div>
             )}
           </div>
@@ -41,7 +45,7 @@ const Login:React.FC = ( ) =>{
             <Line />
             {inputVisible && (
               <div className="login_input">
-                <Input style={{ border: "none" }} type="password" />
+                <Input style={{ border: "none" }} type="password"  placeholder="请输入密码！"/>
               </div>
             )}
           </div>
